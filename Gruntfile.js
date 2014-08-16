@@ -164,6 +164,10 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      options: {
+        compress: true,
+        preserveComments: "some"
+      },
       prodJs: {
         files: {
           '<%= prod %>/js/behavior-ui.js': ['<%= dev %>/js/behavior-ui.js']
@@ -204,4 +208,5 @@ module.exports = function(grunt) {
                    ]);
   });
 };
-
+
+
